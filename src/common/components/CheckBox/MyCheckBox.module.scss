@@ -1,0 +1,96 @@
+@import '../../styles/sass/variables';
+
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+
+  --grey: #545454;
+  --greyDark-1: #34363a;
+  --greyDark-2: #1F2026;
+  --greyDark-3: #1a1c1c;
+  --black: #100f0f;
+}
+
+.material-icons {
+  font-family: $checkBoxFont;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.checkbox {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  grid-gap: 3rem;
+  justify-content: center;
+
+  input {
+    display: none;
+  }
+
+  &__1 {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+
+    label {
+      box-shadow: $shadow;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: .5rem;
+      width: 2.8rem;
+      height: 2.8rem;
+
+      & :hover i {
+        color: var(--primary);
+      }
+
+      i {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--greyDark);
+        transition: .3s ease;
+      }
+
+    }
+
+    & input:checked {
+      & ~ label {
+        box-shadow: $inner-shadow;
+
+        i {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

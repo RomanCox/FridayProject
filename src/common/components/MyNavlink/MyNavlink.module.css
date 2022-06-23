@@ -1,0 +1,47 @@
+.itemContainer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.item {
+  height: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  cursor: pointer;
+  position: relative;
+}
+
+.svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: transparent;
+  stroke: #2dff00;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  transition: 0.5s ease-in-out;
+}
+
+.item:hover, .svg:hover {
+  stroke-dashoffset: 0;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+}
+
+.a.active {
+  color: #2dff00;
+}
+
+.a.active > .svg {
+  stroke-dasharray: 0;
+}

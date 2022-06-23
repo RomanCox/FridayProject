@@ -6,7 +6,7 @@ import Registration from './Profile/Registration';
 import RecoveryPassword from './Profile/RecoveryPassword';
 import NewPassword from './Profile/NewPassword';
 import Profile from './Profile/Profile';
-import { RegistrationLinks } from './Profile/RegistrationLinks';
+import Navbar from './Profile/Navbar';
 
 export const PATH = {
     LOGIN: '/login',
@@ -20,7 +20,7 @@ const Navigation = () => {
     return (
         <div>
             <Routes>
-                <Route path={'/'} element={<RegistrationLinks/>}/>
+                <Route path={'/'} element={<Navbar/>}/>
                 <Route path={PATH.LOGIN} element={<Login/>}/>
                 <Route path={PATH.REGISTRATION} element={<Registration/>}/>
                 <Route path={PATH.RECOVERY_PASSWORD} element={<RecoveryPassword/>}/>

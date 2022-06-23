@@ -1,0 +1,9 @@
+@import './fonts';
+
+$shadow: .3rem .3rem .6rem var(--greyDark-2),
+-.2rem -.2rem .5rem var(--grey);
+
+$inner-shadow: inset .2rem .2rem .5rem var(--greyDark-2),
+inset -.2rem -.2rem .5rem var(--grey);
+
+$checkBoxFont: 'Material Icons';
